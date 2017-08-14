@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.btcomm">
+
+    <!-- Bluetooth Permission -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- Additional Permissions added along to support Marshmallow and above versions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.android.btcomm.AppGlobals"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".DeviceListReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".ConnectionReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".DeviceList"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Holo.Dialog" />
+        <activity android:name=".ChatActivity"></activity>
+
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.android.btcomm.DBStore1" />
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="ChatDB" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1" />
+
+    </application>
+
+</manifest>

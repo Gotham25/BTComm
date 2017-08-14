@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BTComm</string>
+    <string name="search_btn">Search Devices</string>
+    <string name="pair_unpair">Pair/Unpair</string>
+    <string name="connect">Connect to Device</string>
+    <string name="BTComm_DB_NAME">BTComm</string>
+    <string name="BTComm_DB_Version">1</string>
+</resources>
